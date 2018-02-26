@@ -30,6 +30,10 @@
       $("body").removeClass("loading");
     });
     $(document).ready(function() {
+      $('.speaker__blurb').bind('touchstart', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover');
+      });
       $('.speaker').bind('touchstart', function(e) {
         e.preventDefault();
         $($(this).find('.speaker__blurb')).toggleClass('hover');
@@ -256,6 +260,7 @@
       background-color: #F5E4CF;
       color: #F5A11C;
       width: 400px;
+      box-sizing: border-box;
       max-width: 70%;
       margin-left: auto;
       margin-right: auto;
@@ -265,6 +270,7 @@
 
     @media (max-width: 600px) {
       .heading {
+        width: 100%;
         max-width: 100%;
         bottom: 0%;
       }
