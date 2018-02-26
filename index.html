@@ -224,7 +224,7 @@
     }
 
     h1 {
-      margin-top: 5%;
+      margin-top: 50px;
     }
 
     .heading {
@@ -276,6 +276,7 @@
     .speaker__container {
       display: flex;
       width: 100%;
+      margin-top: -40px;
       margin-left: -20px;
       align-content: start;
       justify-content: space-around;
@@ -284,15 +285,29 @@
     }
 
     .speaker {
-      margin-top: 20px;
+      margin-top: 40px;
       padding-left: 20px;
       position: relative;
       width: 250px;
-      height: 250px;
+      height: 300px;
     }
 
     .speaker img {
       width: 250px;
+    }
+
+    .speaker h1, .speaker p {
+      margin: 0 0 0 0;
+    }
+
+    .speaker__role h1 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 16pt;
+    }
+
+    .speaker__role p {
+      font-size: 10pt;
     }
 
     @media (max-width: 600px) {
@@ -301,20 +316,27 @@
       }
     }
 
-    .speaker__role {
+    .speaker__blurb {
       position: absolute;
       background-color: rgba(245, 228, 207, 0.75);
       left: 0;
       top: 0;
-      height: 100%;
+      height: 250px;
       width: 250px;
       box-sizing: border-box;
       margin-left: 20px;
-      padding: 30px;
+      padding: 10px;
+      font-size: 10pt;
       opacity: 0;
     }
 
-    .speaker__role:hover, .speaker__role.hover {
+    .speaker__blurb p {
+      margin-top: 10px;
+    }
+
+    .speaker__blurb:hover, .speaker__blurb.hover {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       animation: 0.5s fade-in forwards ease;
       -webkit-animation: 0.5s fade-in forwards ease;
       -webkit-user-select: none;
@@ -324,6 +346,7 @@
     .schedule__block {
       display: flex;
       flex-direction: row;
+      align-items: center;
       margin-top: 20px;
       padding-left: 5%;
       padding-right: 5%;
@@ -336,8 +359,8 @@
     .time {
       flex: 1;
       text-align: right;
-      padding: 20px;
-      padding-top: 0;
+      padding: 16.5px;
+      /*padding-top: 0;*/
     }
 
     .time p:not(:first-child) {
@@ -499,6 +522,14 @@
     <div class="speaker__container">
       <div class="speaker">
         <img src="/img/wayne.jpg" />
+        <div class="speaker__blurb">
+          <p>Wayne Spiegel is a Product Designer at Palantir. Originally from Toronto, 
+            he was academically trained in graphic design and self-taught in product design.
+          </p><p>
+            Wayne values minimalist design as test of his own design foundations. Outside of design, 
+            Wayne dabbles in photography, games for hours, and beatboxes in the shower.
+          </p>
+        </div>
         <div class="speaker__role">
           <h1>Wayne Spiegel</h1>
           <p>Product Designer at Palantir</p>
@@ -506,6 +537,14 @@
       </div>
       <div class="speaker">
         <img src="/img/ash.jpg" />
+        <div class="speaker__blurb">
+          <p>Ash is a designer, artist and author. Currently with Adobe, Ash has 
+            worked for companies like Dropbox, Pinterest and Twitter.</p>
+          <p>Her essays have 
+            been featured in Fast Company, Offscreen Magazine and Thought Catalog. Her first 
+            novel, The Firesteel, won First Place for Literary Fiction from Writer’s Digest.
+          </p>
+        </div>
         <div class="speaker__role">
           <h1>Ash Huang</h1>
           <p>Experience Designer at Adobe</p>
@@ -513,6 +552,14 @@
       </div>
       <div class="speaker">
         <img src="/img/briana.png" />
+        <div class="speaker__blurb">
+          <p>Briana Hokanson is an Experience Designer working on Lightroom and other 
+            photography tools at Adobe.</p>
+            <p>With a multi-disciplinary background in fine arts, 
+            design and technology she has worked with clients such as National Geographic, Shinola, 
+            &amp; Boston Scientific.
+          </p>
+        </div>
         <div class="speaker__role">
           <h1>Briana Hokanson</h1>
           <p>Experience Designer at Adobe</p>
@@ -520,6 +567,13 @@
       </div>
       <div class="speaker">
         <img src="/img/bing.jpg" />
+        <div class="speaker__blurb">
+          <p>Bing is a product designer and researcher. She has worked with companies 
+            including Samsung, American Eagle Outfitters, and MemSQL. </p>
+            <p>She also had various experience 
+            outside the tech world including being a film producer and journalist.
+          </p>
+        </div>
         <div class="speaker__role">
           <h1>Bingrui Tang</h1>
           <p>Product Designer at MemSQL</p>
@@ -527,6 +581,14 @@
       </div>
       <div class="speaker">
         <img src="/img/andre.jpg" />
+        <div class="speaker__blurb">
+          <p>Andre is the UX Lead of the new Essential smartphone in Palo Alto, CA. 
+            Previously he's worked at places like Google, Microsoft, and some early-stage startups.</p>
+          <p>Andre is always working on personal side projects; his latest is a new AR filter/lens marketplace 
+            called Awesome Filters for Snapchat. When he's not working, you can find him at music festivals 
+            or working on his IG aesthetic.
+          </p>
+        </div>
         <div class="speaker__role">
           <h1>Andre Tacuyan</h1>
           <p>Senior Experience Designer at Essential</p>
