@@ -30,9 +30,9 @@
       $("body").removeClass("loading");
     });
     $(document).ready(function() {
-      $('.speaker__role').bind('touchstart', function(e) {
+      $('.speaker').bind('touchstart', function(e) {
         e.preventDefault();
-        $(this).toggleClass('hover');
+        $($(this).find('.speaker__blurb')).toggleClass('hover');
       });
     });
   </script>
@@ -102,6 +102,18 @@
       margin-right: auto;
     }
 
+    .red {
+      color: #D13528;
+    }
+
+    .green {
+      color: #138E63;
+    }
+
+    .blue {
+      color: #28377F;
+    }
+
     #r {
       transform: translate(-500%, -500%);
       animation-delay: 0s;
@@ -140,9 +152,15 @@
       opacity: 0;
     }
 
-    .noise {
+    .specks {
       background-image: url("/img/specks.png");
       background-size: contain;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      z-index: 9999;
+      pointer-events: none;
+      animation-delay: 4s;
     }
 
     .objects1 {
@@ -225,6 +243,7 @@
 
     h1 {
       margin-top: 50px;
+      font-weight: 400;
     }
 
     .heading {
@@ -244,12 +263,21 @@
       animation-delay: 4s;
     }
 
+    @media (max-width: 600px) {
+      .heading {
+        max-width: 100%;
+        bottom: 0%;
+      }
+    }
+
     .heading h2 {
       margin: 0 0 0 0;
+      font-weight: 400;
     }
 
     .heading h1 {
       font-family: "Jaapokki";
+      font-weight: 400;
       text-transform: uppercase;
       margin: 0 0 0 0;
     }
@@ -478,6 +506,8 @@
   </style>
 </head>
 <body class="loading">
+  <div class="specks fade-in">
+  </div>
   <div class="container">
     <div id="letters" class="slam">
     <img id="r" class="letter slide-in" src="/img/r-part.png"/>
@@ -500,7 +530,7 @@
   </div>
   </div>
   <div class="heading fade-in">
-  <h1>Reach, Grow, Build</h1>
+  <h1><span class="red">Reach.</span> <span class="green">Grow.</span> <span class="blue">Build.</span></h1>
   <h2>March 3, 2018</h2>
   <p><a href="https://rgb2018.eventbrite.com/" class="register__btn">Register now</a></p>
   </div>
