@@ -358,6 +358,8 @@
       padding: 10px;
       font-size: 10pt;
       opacity: 0;
+      transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s;
     }
 
     .speaker__blurb p {
@@ -367,8 +369,7 @@
     .speaker__blurb:hover, .speaker__blurb.hover {
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      animation: 0.5s fade-in forwards ease;
-      -webkit-animation: 0.5s fade-in forwards ease;
+      opacity: 1;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
     }
