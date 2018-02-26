@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <meta
     property="og:image"
-    content="/img/cover.png"
+    content="https://rgb.innovativedesign.club/img/cover.png"
   />
   <meta
     property="og:title"
@@ -28,13 +28,13 @@
     @font-face {
       font-family: "Jaapokki";
       font-weight: 400;
-      src: url("/assets/Jaapokki-Regular.otf") format("otf");
+      src: url("/assets/Jaapokki-Regular.woff") format("woff");
     }
 
     @font-face {
       font-family: "Acre";
       font-weight: 400;
-      src: url("/assets/acre-medium.otf.otf") format("otf");
+      src: url("/assets/acre-medium.woff") format("woff");
     }
 
     body {
@@ -214,7 +214,7 @@
       right: 0;
       z-index: 999;
       text-align: center;
-      bottom: 5%;
+      bottom: 12.5%;
       background-color: #F5E4CF;
       color: #F5A11C;
       width: 400px;
@@ -233,6 +233,10 @@
       font-family: "Jaapokki";
       text-transform: uppercase;
       margin: 0 0 0 0;
+    }
+
+    .heading p {
+      margin-top: 20px;
     }
 
     .content {
@@ -270,6 +274,12 @@
 
     .speaker img {
       width: 250px;
+    }
+
+    @media (max-width: 600px) {
+      #nothing {
+        display: none;
+      }
     }
 
     .speaker__role {
@@ -331,7 +341,7 @@
       text-transform: uppercase;
       text-decoration: none;
       background-color: #F5A11C;
-      padding: 10px 20% 10px 20%;
+      padding: 10px 5% 10px 5%;
       border-radius: 5px;
     }
 
@@ -440,6 +450,7 @@
   <div class="heading fade-in">
   <h1>Reach, Grow, Build</h1>
   <h2>March 3, 2018</h2>
+  <p><a href="https://rgb2018.eventbrite.com/" class="register__btn">Register now</a></p>
   </div>
   <div class="content">
     <h1>About</h1>
@@ -492,7 +503,7 @@
           <p>Senior Experience Designer at Essential</p>
         </div>
       </div>
-      <div class="speaker" style="opacity: 0">
+      <div class="speaker" id="nothing" style="opacity: 0">
         <img src="" />
         <div class="speaker__role">
           <h1></h1>
