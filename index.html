@@ -30,7 +30,7 @@
       $("body").removeClass("loading");
     });
     $(document).ready(function() {
-      $('.speaker__blurb').bind('touchstart', function(e) {
+      $('.speaker__blurb').bind('mouseenter mouseleave touchstart', function(e) {
         e.preventDefault();
         $(this).toggleClass('hover');
       });
@@ -366,7 +366,7 @@
       margin-top: 10px;
     }
 
-    .speaker__blurb:hover, .speaker__blurb.hover {
+    .speaker__blurb.hover {
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       opacity: 1;
