@@ -31,7 +31,7 @@ body {
 }
 
 #blob_container__top--blue {
-  transform: translate(0%, -50%);
+  transform: translate(5%, -40%);
 }
 
 #blob_container__top--green {
@@ -46,7 +46,6 @@ body {
   height: 100%;
   width: 100%;
   left: 0px;
-  /* background-color: #FFF; */ /* REMOVE */
 }
 
 .images_container__left div {
@@ -68,28 +67,27 @@ body {
   transform: translate(40%, -190%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Right blobs */
 
 .images_container__right {
+  /* position: absolute; */ /* implied */
+  height: 100%;
+  width: 100%;
   right: 0px;
+  /* background-color: white; */
+}
+
+.images_container__right div {
+  position: absolute;
+  right: 0px;
+}
+
+#blob_container__right--red {
+  width: 20%;
+}
+
+#blob_container__right--grey {
+  width: 30%;
+  top: 50%;
+  transform: translate(60%, -50%);
 }
