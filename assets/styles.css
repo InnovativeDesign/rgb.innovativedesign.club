@@ -42,9 +42,53 @@ body {
 /* Left blobs */
 
 .images_container__left {
-  top: 50vh;
+  /* position: absolute; */ /* implied */
+  height: 100%;
+  width: 100%;
   left: 0px;
+  /* background-color: #FFF; */ /* REMOVE */
 }
+
+.images_container__left div {
+  /* position: absolute; */
+}
+
+#blob_container__left--yellow {
+  width: 40%;
+  transform: translate(-40%, 10%);
+}
+
+#blob_container__left--grey {
+  width: 20%;
+  transform: translate(0%, 100%);
+}
+
+#blob_container__left--red {
+  width: 20%;
+  transform: translate(40%, -190%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .images_container__right {
   right: 0px;
