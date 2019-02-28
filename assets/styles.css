@@ -1,0 +1,51 @@
+body {
+  overflow-x: hidden;
+  background-color: #F1E8D4;
+}
+
+.hero_container {
+  position: relative;
+  width: 100%;
+  border: 1px solid black; /* REMOVE */
+  height: 110vh;
+}
+
+.hero_images_container {
+  position: absolute;
+}
+
+.hero_images_container img {
+  width: 100%;
+}
+
+/* Top blobs */
+
+.images_container__top {
+  /* position: absolute; */ /* implied */
+  top: 0;
+  width: 100%;
+}
+
+.images_container__top div {
+  position: absolute;
+}
+
+#blob_container__top--blue {
+  transform: translate(0%, -50%);
+}
+
+#blob_container__top--green {
+  width: 20%;
+  transform: translate(-30%, -20%);
+}
+
+/* Left blobs */
+
+.images_container__left {
+  top: 50vh;
+  left: 0px;
+}
+
+.images_container__right {
+  right: 0px;
+}

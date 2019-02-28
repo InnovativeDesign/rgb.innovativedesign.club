@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta
+    property="og:image"
+    content="https://rgb.innovativedesign.club/img/cover.png"
+  />
+  <meta
+    property="og:title"
+    content="RGB: Reach Grow Build 2018"
+  />
+  <meta
+    property="og:description"
+    content="Join Innovative Design on Saturday, March 3rd for a day of
+    learning from industry designers, through a series of talks, workshops, and open Q&A."
+  />
+  <meta
+    property="og:type"
+    content="website" />
+  <meta
+    property="og:url"
+    content="https://rgb.innovativedesign.club"
+  />
+  <title>RGB: Reach Grow Build</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(window).on('load', function() {
+      $("body").removeClass("loading");
+    });
+    $(document).ready(function() {
+      $('.speaker__blurb').bind('mouseenter mouseleave touchstart', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover');
+      });
+    });
+  </script>
+  <style type="text/css">
+    @font-face {
+      font-family: "Jaapokki";
+      font-weight: 400;
+      src: url("/assets/Jaapokki-Regular.woff") format("woff");
+    }
+
+    @font-face {
+      font-family: "Acre";
+      font-weight: 400;
+      src: url("/assets/acre-medium.woff") format("woff");
+    }
+
+    body {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      animation-play-state: running;
+      -webkit-animation-play-state: running;
+    }
+
+    .loading *,
+    .loading *:before,
+    .loading *:after {
+      animation-play-state: paused !important;
+      -webkit-animation: none !important;
+    }
+
+
+    .fade-in {
+      opacity: 0;
+      animation: fade-in 0.5s forwards ease;
+      -webkit-animation: fade-in 0.5s forwards ease;
+      animation-delay: 2s;
+    }
+
+    .slide-in {
+      animation: slide-in 1.5s forwards ease;
+      -webkit-animation: slide-in 1.5s forwards ease;
+    }
+
+    .slam {
+      position: absolute;
+      width: 100%;
+      height: 500px;
+      animation: slam 2s forwards cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      -webkit-animation: slam 2s forwards cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      animation-delay: 2.2s;
+    }
+
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+
+    .letter {
+      position: absolute;
+      width: 250px;
+      margin-top: 5%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .red {
+      color: #D13528;
+    }
+
+    .green {
+      color: #138E63;
+    }
+
+    .blue {
+      color: #28377F;
+    }
+
+    #r {
+      transform: translate(-500%, -500%);
+      animation-delay: 0.05s;
+    }
+
+    #g {
+      transform: translate(500%, -500%);
+      animation-delay: 0.3s;
+    }
+
+    #b {
+      transform: translate(0%, 500%);
+      animation-delay: 0.5s;
+    }
+
+    #full {
+      position: absolute;
+      z-index: 99;
+    }
+
+    .background {
+      margin-top: 20%;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #F5E4CF;
+      border-radius: 100%;
+      animation: expand 1s forwards ease;
+      -webkit-animation: expand 1s forwards ease;
+      animation-delay: 4s;
+      opacity: 0;
+    }
+
+    .specks {
+      background-image: url("/img/specks.png");
+      background-size: contain;
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      z-index: 9999;
+      pointer-events: none;
+      animation-delay: 4s;
+    }
+
+    .objects1 {
+      width: 100%;
+      height: 500px;
+      z-index: -1;
+      position: relative;
+      animation-delay: 4s;
+    }
+
+    .object {
+      position: absolute;
+    }
+
+
+    #dots1 {
+      width: 200px;
+      top: 5%;
+      right: 20%;
+    }
+
+    #dots2 {
+      width: 150px;
+      left: 20%;
+      top: 50%;
+    }
+
+    #stripes1 {
+      width: 70px;
+      top: 50%;
+      right: 20%;
+    }
+
+    #stripes2 {
+      width: 30px;
+      left: 5%;
+      top: 10%;
+    }
+
+    #stripes3 {
+      width: 80px;
+      bottom: 10%;
+      transform: rotate(90deg);
+      left: 20%;
+    }
+
+    #stripes4 {
+      width: 150px;
+      bottom: 5%;
+      left: 40%;
+    }
+
+    #x {
+      width: 40px;
+      left: 30%;
+      top: 5%;
+    }
+
+    #triangle1 {
+      width: 20px;
+      top: 40%;
+      right: 20%;
+    }
+
+    #triangle2 {
+      width: 30px;
+      left: 20%;
+      top: 30%;
+    }
+
+    #circle1 {
+      width: 250px;
+      right: 5%;
+      bottom: 0;
+    }
+
+    body {
+      font-family: Acre, BlinkMacSystemFont, sans-serif;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-weight: 400;
+    }
+
+    .heading {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      text-align: center;
+      bottom: 5%;
+      background-color: #F5E4CF;
+      color: #F5A11C;
+      width: 400px;
+      box-sizing: border-box;
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 15px;
+      animation-delay: 4s;
+    }
+
+    @media (max-width: 600px) {
+      .heading {
+        width: 100%;
+        max-width: 100%;
+        bottom: 0%;
+      }
+    }
+
+    .heading h2 {
+      margin: 0 0 0 0;
+      font-weight: 400;
+    }
+
+    .heading h1 {
+      font-family: "Jaapokki";
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0 0 0 0;
+    }
+
+    .heading p {
+      margin-top: 20px;
+    }
+
+    .content {
+      padding-left: 20%;
+      padding-right: 20%;
+      box-sizing: border-box;
+      min-width: 800px;
+    }
+
+    @media (max-width: 870px) {
+      .content {
+        padding-left: 5%;
+        padding-right: 5%;
+        min-width: 100%;
+      }
+    }
+
+    .speaker__container {
+      display: flex;
+      width: 100%;
+      margin-top: -40px;
+      margin-left: -20px;
+      align-content: start;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .speaker {
+      margin-top: 40px;
+      padding-left: 20px;
+      position: relative;
+      width: 250px;
+      height: 300px;
+    }
+
+    .speaker img {
+      width: 250px;
+    }
+
+    .speaker h1, .speaker p {
+      margin: 0 0 0 0;
+    }
+
+    .speaker__role h1 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 16pt;
+    }
+
+    .speaker__role p {
+      font-size: 10pt;
+    }
+
+    #nothing {
+      height: 0;
+    }
+
+    @media (max-width: 600px) {
+      #nothing {
+        display: none;
+      }
+    }
+
+    .speaker__blurb {
+      position: absolute;
+      background-color: rgba(245, 228, 207, 0.75);
+      left: 0;
+      top: 0;
+      height: 250px;
+      width: 250px;
+      box-sizing: border-box;
+      margin-left: 20px;
+      padding: 10px;
+      font-size: 10pt;
+      opacity: 0;
+      transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s;
+    }
+
+    .speaker__blurb p {
+      margin-top: 10px;
+    }
+
+    .speaker__blurb.hover {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      opacity: 1;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .schedule__block {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .time h1, .time p {
+      margin: 0 0 0 0;
+    }
+
+    .time {
+      flex: 1;
+      text-align: right;
+      padding: 16.5px;
+      /*padding-top: 0;*/
+    }
+
+    .time p:not(:first-child) {
+      font-size: 14pt;
+      font-weight: 700;
+    }
+
+    .description {
+      flex: 2.5;
+    }
+
+    @media (max-width: 600px) {
+      .schedule__block {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .description {
+        flex: 2;
+      }
+    }
+
+
+    .footer {
+      margin-top: 10%;
+      text-align: center;
+    }
+
+    .register__btn {
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: #F5A11C;
+      padding: 10px 5% 10px 5%;
+      border-radius: 5px;
+    }
+
+    a.register__btn {
+      color: white;
+    }
+
+    .footer p {
+      color: gray;
+    }
+
+    .footer img {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 50px;
+    }
+
+    @keyframes expand {
+      0% {
+        opacity: 1;
+        transform: scale(0);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(40);
+      }
+    }
+
+    @keyframes slam {
+      0% {
+        transform: translateY(0%);
+      }
+
+      30% {
+       transform: translateY(-10%);
+      }
+
+      90% {
+        transform: translateY(-14%);
+      }
+
+      95% {
+        transform: translateY(0%);
+      }
+
+      96% {
+        transform: translateY(-2%);
+      }
+
+      97% {
+        transform: translateY(0%);
+      }
+
+      98% {
+        transform: translateY(-2%);
+      }
+
+      100% {
+        transform: translateY(0%);
+      }
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1.0;
+      }
+    }
+
+    @keyframes slide-in {
+        100% {
+          transform: translate(0%, 0%);
+      }
+    }
+
+    @-webkit-keyframes slide-in {
+        100% { -webkit-transform: translateX(0%); }
+    }
+  </style>
+</head>
+<body class="loading">
+  <div class="specks fade-in">
+  </div>
+  <div class="container">
+    <div id="letters" class="slam">
+    <img id="r" class="letter slide-in" src="img/r-part.png"/>
+    <img id="g" class="letter slide-in" src="img/g-part.png"/>
+    <img id="b" class="letter slide-in" src="img/b-part.png"/>
+    <img id="full" class="letter fade-in" src="img/full-rgb.png"/>
+    </div>
+  <div class="background expand"></div>
+  <div class="objects1 fade-in">
+    <img src="img/dots1.png" class="object" id="dots1" />
+    <img src="img/dots2.png" class="object" id="dots2" />
+    <img src="img/stripes1.png" class="object" id="stripes1" />
+    <img src="img/stripes2.png" class="object" id="stripes2" />
+    <img src="img/stripes3.png" class="object" id="stripes3" />
+    <img src="img/stripes4.png" class="object" id="stripes4" />
+    <img src="img/circle1.png" class="object" id="circle1" />
+    <img src="img/x.png" class="object" id="x" />
+    <img src="img/triangle1.png" class="object" id="triangle1" />
+    <img src="img/triangle2.png" class="object" id="triangle2" />
+  </div>
+  </div>
+  <div class="heading fade-in">
+    <h1><span class="red">Reach.</span> <span class="green">Grow.</span> <span class="blue">Build.</span></h1>
+    <h2>March 3, 2018</h2>
+    <p><a href="https://rgb2018.eventbrite.com/" class="register__btn">Register now</a></p>
+  </div>
+  <div class="content">
+    <h1>About</h1>
+    <p>Join Innovative Design on Saturday, March 3rd for a day
+      of learning from industry designers, through a series of talks,
+      workshops, and open Q&A. Following the theme of “embracing your roots”,
+      speeches and workshops will explore the unique backgrounds of these
+      professionals and celebrate diversity! The speaker series will be
+      followed by workshops taught by speakers and other designers, and
+      will focus on how to build yourself professionally.
+    </p>
+    <p>This event will be held at Berkeley’s Jacobs Hall for Design
+      Innovation. Breakfast and lunch will be provided, fun will be had,
+      and minds will be blown.
+    </p>
+    <h1>Speakers</h1>
+    <div class="speaker__container">
+      <div class="speaker">
+        <img src="img/wayne.jpg" />
+        <div class="speaker__blurb">
+          <p>Wayne Spiegel is a Product Designer at Palantir. Originally from Toronto,
+            he was academically trained in graphic design and self-taught in product design.
+          </p><p>
+            Wayne values minimalist design as test of his own design foundations. Outside of design,
+            Wayne dabbles in photography, games for hours, and beatboxes in the shower.
+          </p>
+        </div>
+        <div class="speaker__role">
+          <h1>Wayne Spiegel</h1>
+          <p>Product Designer at Palantir</p>
+        </div>
+      </div>
+      <div class="speaker">
+        <img src="img/ash.jpg" />
+        <div class="speaker__blurb">
+          <p>Ash is a designer, artist and author. Currently with Adobe, Ash has
+            worked for companies like Dropbox, Pinterest and Twitter.</p>
+          <p>Her essays have
+            been featured in Fast Company, Offscreen Magazine and Thought Catalog. Her first
+            novel, The Firesteel, won First Place for Literary Fiction from Writer’s Digest.
+          </p>
+        </div>
+        <div class="speaker__role">
+          <h1>Ash Huang</h1>
+          <p>Experience Designer at Adobe</p>
+        </div>
+      </div>
+      <div class="speaker">
+        <img src="img/briana.png" />
+        <div class="speaker__blurb">
+          <p>Briana Hokanson is an Experience Designer working on Lightroom and other
+            photography tools at Adobe.</p>
+            <p>With a multi-disciplinary background in fine arts,
+            design and technology she has worked with clients such as National Geographic, Shinola,
+            &amp; Boston Scientific.
+          </p>
+        </div>
+        <div class="speaker__role">
+          <h1>Briana Hokanson</h1>
+          <p>Experience Designer at Adobe</p>
+        </div>
+      </div>
+      <div class="speaker">
+        <img src="img/bing.jpg" />
+        <div class="speaker__blurb">
+          <p>Bing is a product designer and researcher. She has worked with companies
+            including Samsung, American Eagle Outfitters, and MemSQL. </p>
+            <p>She also had various experience
+            outside the tech world including being a film producer and journalist.
+          </p>
+        </div>
+        <div class="speaker__role">
+          <h1>Bingrui Tang</h1>
+          <p>Product Designer at MemSQL</p>
+        </div>
+      </div>
+      <div class="speaker">
+        <img src="img/andre.jpg" />
+        <div class="speaker__blurb">
+          <p>Andre is the UX Lead of the new Essential smartphone in Palo Alto, CA.
+            Previously he's worked at places like Google, Microsoft, and some early-stage startups.</p>
+          <p>Andre is always working on personal side projects; his latest is a new AR filter/lens marketplace
+            called Awesome Filters for Snapchat. When he's not working, you can find him at music festivals
+            or working on his IG aesthetic.
+          </p>
+        </div>
+        <div class="speaker__role">
+          <h1>Andre Tacuyan</h1>
+          <p>Senior Experience Designer at Essential</p>
+        </div>
+      </div>
+      <div class="speaker">
+        <img src="img/kevin.jpg" />
+        <div class="speaker__blurb">
+          <p>Kevin learned design and photography through InnoD while he was at Cal.</p>
+          <p>He loves the storytelling aspect that layout design can bring to photography and spends his free time taking photos, making layouts, and then fretting over what to post onto Instagram.</p>
+          <p>He's a software engineer at Facebook and can probably beat you at Smash.</p>
+        </div>
+        <div class="speaker__role">
+          <h1>Kevin Lee</h1>
+          <p>Software Engineer at Facebook</p>
+        </div>
+      </div>
+      <div class="speaker">
+        <img src="img/david.png" />
+        <div class="speaker__blurb">
+          <p>David Xie has spent his whole college career with Innovative Design and passionate about uplifting fellow young designers!</p>
+          <p>He freelances in graphic design and web development, and is trying to explore other nifty arts and crafts in his spare time.</p>
+        </div>
+        <div class="speaker__role">
+          <h1>David Xie</h1>
+          <p>Co-President of Innovative Design</p>
+        </div>
+      </div>
+      <div class="speaker" id="nothing" style="opacity: 0">
+        <img src="" />
+        <div class="speaker__role">
+          <h1></h1>
+          <p></p>
+        </div>
+      </div>
+      <div class="speaker" id="nothing" style="opacity: 0">
+        <img src="" />
+        <div class="speaker__role">
+          <h1></h1>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <h1>Schedule</h1>
+    <div class="schedule__container">
+      <div class="schedule__block">
+        <div class="time">
+          <p>10:00 AM</p>
+          <p>Check-In</p>
+        </div>
+        <div class="description">
+          Welcome to RGB 2018! Enjoy a warm cup of coffee and bagel while you check-in,
+          and remember to bring your Cal ID for entry. Grab some RGB-themed pins too!
+        </div>
+      </div>
+      <div class="schedule__block">
+        <div class="time">
+          <p>10:30 AM</p>
+          <p>Speaker &amp; Workshop Series #1</p>
+        </div>
+        <div class="description">
+          Listen to guest speakers share how embracing their roots inspired and guided
+          them in the industry and participate in workshops led by speakers about the
+          creative process and industry tools.
+        </div>
+      </div>
+      <div class="schedule__block">
+        <div class="time">
+          <p>12:15 PM</p>
+          <p>Lunch</p>
+        </div>
+        <div class="description">
+          Take a break and enjoy complimentary lunch
+        </div>
+      </div>
+      <div class="schedule__block">
+        <div class="time">
+          <p>1:00 PM</p>
+          <p>Speaker &amp; Workshop Series #2</p>
+        </div>
+        <div class="description">
+          Listen to guest speakers share how embracing their roots inspired and
+          guided them in the industry and participate in workshops led by speakers
+          about the creative process and industry tools. There will also be a short break
+          at 1:45 PM where you can network with fellow designers and the speakers themselves!
+        </div>
+      </div>
+      <div class="schedule__block">
+        <div class="time">
+          <p>3:45 PM</p>
+          <p>Closing Remarks + Open Floor</p>
+        </div>
+        <div class="description">
+          We wrap things up and open up the floor for mingling.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://rgb2018.eventbrite.com/" class="register__btn">Register now (Eventbrite)</a>
+      <p>We sell out fast, so don’t dally!</p>
+      <a href="https://innovativedesign.club"><img src="img/innod.png" /></a>
+    </div>
+  </div>
+  </body>
+</html>
