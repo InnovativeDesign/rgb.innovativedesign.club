@@ -6,7 +6,6 @@ body {
 .hero_container {
   position: relative;
   width: 100%;
-  border: 1px solid black; /* REMOVE */
   height: 110vh;
 }
 
@@ -16,6 +15,49 @@ body {
 
 .hero_images_container img {
   width: 100%;
+}
+
+/* Z index */
+
+.blob_container--grey {
+  z-index: -5;
+}
+
+.blob_container--yellow {
+  z-index: -4;
+}
+
+.blob_container--green {
+  z-index: -3;
+}
+
+.blob_container--blue {
+  z-index: -2;
+}
+
+.blob_container--red {
+  z-index: -1;
+}
+
+/* Center blobs */
+
+.images_container__center {
+  /* position: absolute; */ /* implied */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.images_container__center div {
+  position: absolute;
+}
+
+.images_container__center .blob_container--red {
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
 }
 
 /* Top blobs */
@@ -30,11 +72,11 @@ body {
   position: absolute;
 }
 
-#blob_container__top--blue {
+.images_container__top .blob_container--blue {
   transform: translate(5%, -40%);
 }
 
-#blob_container__top--green {
+.images_container__top .blob_container--green {
   width: 20%;
   transform: translate(-30%, -20%);
 }
@@ -49,22 +91,25 @@ body {
 }
 
 .images_container__left div {
-  /* position: absolute; */
+  position: absolute;
 }
 
-#blob_container__left--yellow {
-  width: 40%;
-  transform: translate(-40%, 10%);
+.images_container__left .blob_container--yellow {
+  width: 60%;
+  top: 50%;
+  transform: translate(-40%, -30%);
 }
 
-#blob_container__left--grey {
+.images_container__left .blob_container--grey {
   width: 20%;
-  transform: translate(0%, 100%);
+  top: 0%;
+  transform: translate(-20%, 90%);
 }
 
-#blob_container__left--red {
+.images_container__left .blob_container--red {
   width: 20%;
-  transform: translate(40%, -190%);
+  bottom: 0%;
+  transform: translate(40%, 0%);
 }
 
 /* Right blobs */
@@ -82,12 +127,19 @@ body {
   right: 0px;
 }
 
-#blob_container__right--red {
-  width: 20%;
+.images_container__right .blob_container--red {
+  width: 30%;
+  transform: translate(40%, -20%);
 }
 
-#blob_container__right--grey {
-  width: 30%;
+.images_container__right .blob_container--grey {
+  width: 40%;
   top: 50%;
   transform: translate(60%, -50%);
+}
+
+.images_container__right .blob_container--green {
+  width: 60%;
+  bottom: 0%;
+  transform: translate(30%, 40%);
 }
