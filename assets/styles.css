@@ -1,12 +1,110 @@
-body {
-  overflow-x: hidden;
-  background-color: #F1E8D4;
+@font-face {
+  font-family: "SportingGrotesque";
+  font-weight: 400;
+  src: url("SportingGrotesque-Regular.otf");
 }
 
-.hero_container {
+@font-face {
+  font-family: "SportingGrotesque";
+  src: url("SportingGrotesque-Bold.otf");
+  font-weight: bold;
+}
+
+body {
+  /* font-family: "SportingGrotesque"; */
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(
+      #F1E8D4,
+      #fffdf9 40%
+    );
+}
+
+h1 {
+  font-size: 84px;
+  font-size: 5vw;
+}
+
+h3 {
+  font-size: 24px;
+  font-size: 1.25vw;
+}
+
+button {
+  border: none;
+  color: #FFFDF9;
+  width: 160px;
+  height: 50px;
+  background-color: #48488E;
+  border-radius: 5px;
+}
+
+.hero_container--outer {
+  font-family: "SportingGrotesque";
   position: relative;
+  /* display: flex;
+  flex-direction: column; */
   width: 100%;
-  height: 110vh;
+  /* border: 1px solid black; */
+  height: 100%;
+  /* overflow-x: inherit; */
+  overflow-y: visible;
+}
+
+.hero_container--inner {
+  /* overflow-y: visible; */
+}
+
+.hero_text_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hero_text_container--inner {
+  color: #fffbf2;
+  position: absolute;
+  /* width: 30%;  */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  text-align: center;
+  /* background-color: black; */
+}
+
+.hero_text_container--inner svg {
+  width: auto;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 10vw;
+  transform-origin: bottom;
+}
+
+.hero_text_container--inner img {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  height: 10vw;
+}
+
+.hero_text_container--inner h1 {
+  text-align: left;
+  line-height: 6vw;
+}
+
+.button__container {
+  transform: translate(0%, 150%);
+}
+
+.button__container h3 {
+  color: #48488E;
+}
+
+.button__container button {
+
 }
 
 .hero_images_container {
@@ -54,10 +152,11 @@ body {
 }
 
 .images_container__center .blob_container--red {
-  width: 60%;
+  width: 40%;
+  max-width: 800px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -75%);
 }
 
 /* Top blobs */
@@ -141,5 +240,35 @@ body {
 .images_container__right .blob_container--green {
   width: 60%;
   bottom: 0%;
-  transform: translate(30%, 40%);
+  transform: translate(50%, 40%);
+}
+
+
+
+
+
+
+
+
+
+.content {
+  margin-top: 50%;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+.speakers_container {
+  /* background-color: #FFF; */
+}
+
+.speakers-img_container {
+  margin-bottom: 50px;
+}
+
+.speakers-img_container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
