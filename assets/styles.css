@@ -471,11 +471,19 @@ a:hover {
 
 }
 
-.content h2 {
+/* .content h2 {
   text-align: center;
   padding-bottom: 50px;
 }
 
+.content h5, .content h6 {
+  text-align: center;
+} */
+
+.title {
+  text-align: center;
+  padding-bottom: 50px; 
+}
 
 /* About */
 
@@ -618,7 +626,7 @@ a:hover {
   }
 
   .speakers_wrapper .blob_container--red {
-    display: none; 
+    display: none;
   }
 
   .speakers_wrapper .blob_container--yellow {
