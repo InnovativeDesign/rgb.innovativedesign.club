@@ -23,25 +23,27 @@ hero_timeline
   opacity: [0, 1],
   scaleY: [0, 1],
   delay: function(el, index) {
-    return index * 150
+    return index * 150 - 450
   },
   direction: 'forward',
 })
+
 .add({
   targets: '.blob',
   scale: [0, 1],
   delay: function(el, index) {
-    return index * 150
+    return index * 150 - 300
   },
   direction: 'forward',
 })
 .add({
   targets: '.logo-intersect',
   opacity: [1, 0],
-  duration: 1000
+  duration: 1000,
+  delay: -450
 })
-.add({
-  targets: '.button__container button',
-  scale: [0, 1],
-  duration: 500,
-})
+// .add({
+//   targets: '.button__container button',
+//   scale: [0, 1],
+//   duration: 500,
+// })
