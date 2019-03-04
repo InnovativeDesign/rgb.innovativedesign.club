@@ -7,13 +7,13 @@ hero_timeline
   targets: '.blob-main',
   scale: [0, 1],
   direction: 'forward',
-  duration: 700
+  duration: 500
 })
 .add({
   targets: 'h1',
   scale: [0, 1],
   delay: function(el, index) {
-    return index * 300
+    return index * 150
   },
   duration: 900,
   direction: 'forward',
@@ -23,10 +23,10 @@ hero_timeline
   opacity: [0, 1],
   scaleY: [0, 1],
   delay: function(el, index) {
-    return index * 400
+    return index * 150
   },
   direction: 'forward',
-}, '-=700')
+})
 .add({
   targets: '.blob',
   scale: [0, 1],
@@ -34,12 +34,11 @@ hero_timeline
     return index * 150
   },
   direction: 'forward',
-}, '-=700')
+})
 .add({
   targets: '.logo-intersect',
   opacity: [1, 0],
-  duration: 500,
-  delay: 200
+  duration: 1000
 })
 .add({
   targets: '.button__container button',
