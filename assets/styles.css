@@ -368,7 +368,7 @@ a:hover {
 .images_container__left .blob_container--yellow {
   width: 40%;
   top: 50%;
-  transform: translate(-40%, -40%);
+  transform: translate(-30%, -40%);
 }
 
 .images_container__left .blob_container--red {
@@ -382,7 +382,7 @@ a:hover {
   .images_container__left .blob_container--yellow {
     width: 100%;
     top: 50%;
-    transform: translate(-40%, -40%);
+    transform: translate(-35%, -40%);
   }
 
   .images_container__left .blob_container--red {
