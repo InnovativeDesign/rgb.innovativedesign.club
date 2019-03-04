@@ -197,11 +197,11 @@ a:hover {
   .hero_text_container--inner {
     color: #fffbf2;
     position: absolute;
-    width: 50%;
+    width: 52%;
     height: auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -65%);
+    transform: translate(-50%, -70%);
     text-align: center;
   }
 
@@ -218,16 +218,15 @@ a:hover {
     line-height: 12vw;
   }
 
+  .hero_text_container--inner h3 {
+    font-size: 3vw;
+  }
+
   .presents__container {
     /* background-color: white; */
 
     transform: translate(0%, 120%);
     z-index: 1000;
-  }
-
-  .presents__container h3 {
-    font-size: 3vw;
-    /* width: 40%; */
   }
 
   .button__container button {
@@ -238,12 +237,14 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 320px) {
 
+  .hero_text_container--inner {
+    width: 55%;
+    transform: translate(-50%, -65%);
+  }
 
-
-
-
-
+}
 
 
 
@@ -482,7 +483,7 @@ a:hover {
 
 .title {
   text-align: center;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
 }
 
 /* About */
@@ -707,6 +708,12 @@ a:hover {
 .schedule-time {
   font-weight: 600;
   color: #E17A5C;
+}
+
+@media only screen and (max-width: 600px) {
+  .schedule-time {
+    margin-bottom: 8px;
+  }
 }
 
 .schedule-row b {
