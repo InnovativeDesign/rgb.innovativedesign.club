@@ -1,12 +1,12 @@
 @font-face {
   font-family: "SportingGrotesque";
   font-weight: 400;
-  src: url("SportingGrotesque-Regular.otf");
+  src: url("fonts/SportingGrotesque-Regular.otf");
 }
 
 @font-face {
   font-family: "SportingGrotesque";
-  src: url("SportingGrotesque-Bold.otf");
+  src: url("fonts/SportingGrotesque-Bold.otf");
   font-weight: bold;
 }
 
