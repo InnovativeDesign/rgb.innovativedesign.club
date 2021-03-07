@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "RGB: Reach Grow Build",
+  "name": "RGB: Reach Grow Build",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,7 +13,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "BANNER.png",
       "type": "image/png",
       "sizes": "512x512"
     }
