@@ -54,8 +54,14 @@
   font-family: 'Terminal';
   background-color: #F45093;
   color: white;
-  font-weight: 400;
   width: 100%;
+  
+  font-size: 36px;
+  font-weight: 400;
+  padding: 10px 0px;
+}
+.registerButton:hover {
+  background-color: #1728A8;
 }
 
 .section2 {
