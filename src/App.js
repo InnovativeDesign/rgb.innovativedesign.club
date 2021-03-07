@@ -3,9 +3,9 @@ import Banner from './img/BANNER.svg'
 
 const scheduleContent = [
   {
-    name: "Erik Herrström",
-    time: "1:10 pm",
-    desc: "Independent Design Director",
+    name: "Welcome to RGB 2021",
+    time: "1:00 pm",
+    desc: "Sit tight, RGB 2021 is about to begin!",
   },
   {
     name: "Erik Herrström",
@@ -13,19 +13,19 @@ const scheduleContent = [
     desc: "Independent Design Director",
   },
   {
-    name: "Erik Herrström",
-    time: "1:10 pm",
-    desc: "Independent Design Director",
+    name: "Elba Ornelas",
+    time: "2:00 pm",
+    desc: "Dossiette",
   },
   {
-    name: "Erik Herrström",
-    time: "1:10 pm",
-    desc: "Independent Design Director",
+    name: "Tala Safié",
+    time: "2:50 pm",
+    desc: "New York Times",
   },
   {
-    name: "Erik Herrström",
-    time: "1:10 pm",
-    desc: "Independent Design Director",
+    name: "Office Hours",
+    time: "3:30 pm",
+    desc: "Open QA",
   },
 ]
 
@@ -36,10 +36,10 @@ function Schedule({ content }) {
         {content.map(speaker => (
           <div className="speaker">
             <div>
-              <p>{speaker.name}</p>
-              <p>{speaker.time}</p>
+              <div className="speakerTime">{speaker.time}</div>
+              <div className="speakerName">{speaker.name}</div>
             </div>
-            <p>{speaker.desc}</p>
+            <div className="speakerDesc">{speaker.desc}</div>
           </div>
         ))}
       </div>
@@ -70,7 +70,7 @@ function Content() {
           <h3 className="BUILD"> - BUILD</h3>
         </div>
         <h3>3/13/21, 1-4pm PT</h3>
-        <h1 className="registerButton"><a href="https://www.youtube.com/watch?v=mziqemzMMeU&ab_channel=SlappersOnly">REGISTER NOW</a></h1>
+        <h1 className="registerButton"><a href="https://www.eventbrite.com/e/rgb-2021-speaker-series-tickets-144309562787">REGISTER NOW</a></h1>
       </div>
     </>
   )

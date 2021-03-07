@@ -72,7 +72,27 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 20px 0px;
 }
+
+.speakerTime {
+  color: #FFB91C;
+  font-family: 'Terminal';
+  font-weight: 400;
+  font-size: 36px;
+}
+.speakerName {
+  color: black;
+  font-family: 'DMSans';
+  font-weight: 700;
+  font-size: 24px;
+}
+.speakerDesc {
+  color: black;
+  font-family: 'DMSans';
+  font-weight: 400;
+}
+
 
 h2 {
   color: #1728A8;
