@@ -75,6 +75,16 @@
   padding: 20px 0px;
 }
 
+.speakerHover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+.speakerHover:hover {
+  background-color: rgb(23,40,168, .1);
+}
+
 .speakerTime {
   color: #FFB91C;
   font-family: 'Terminal';
@@ -88,6 +98,8 @@
   font-size: 24px;
 }
 .speakerDesc {
+  max-width: 60%;
+
   color: black;
   font-family: 'DMSans';
   font-weight: 400;

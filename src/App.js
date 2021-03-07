@@ -10,22 +10,25 @@ const scheduleContent = [
   {
     name: "Erik Herrström",
     time: "1:10 pm",
-    desc: "Independent Design Director",
+    desc: "Formerly Brand Design Director at Spotify. Now, independent designer based in Vienna with focus on branding and art direction",
+    link: "https://erikherrstrom.com/"
   },
   {
     name: "Elba Ornelas",
     time: "2:00 pm",
-    desc: "Dossiette",
+    desc: "A Guadalajara-based Senior UX designer, currently leading the team that’s getting rid of food waste in our Wizeline offices. I’m also a mentor, an occasional speaker, and a full-time advocate of naps.",
+    link: "https://dossiette.com/"
   },
   {
     name: "Tala Safié",
     time: "2:50 pm",
-    desc: "New York Times",
+    desc: "I am a graphic designer from Beirut based in New York. I currently work with AIGA Eye on Design 🤱🏽 and as an art director for The New York Times.",
+    link: "https://www.talasafie.com/"
   },
   {
     name: "Office Hours",
     time: "3:30 pm",
-    desc: "Open QA",
+    desc: "Open QA, come meet the team!",
   },
 ]
 
@@ -34,13 +37,25 @@ function Schedule({ content }) {
     <>
       <div className="schedule">
         {content.map(speaker => (
-          <div className="speaker">
-            <div>
-              <div className="speakerTime">{speaker.time}</div>
-              <div className="speakerName">{speaker.name}</div>
+          <>
+          {speaker.link ? 
+            <a href={speaker.link} className="speakerHover" target="_blank">
+              <div>
+                <div className="speakerTime">{speaker.time}</div>
+                <div className="speakerName">{speaker.name}</div>
+              </div>
+              <div className="speakerDesc">{speaker.desc}</div>
+            </a>
+            : 
+            <div href={speaker.link} className="speaker" target="_blank">
+              <div>
+                <div className="speakerTime">{speaker.time}</div>
+                <div className="speakerName">{speaker.name}</div>
+              </div>
+              <div className="speakerDesc">{speaker.desc}</div>
             </div>
-            <div className="speakerDesc">{speaker.desc}</div>
-          </div>
+          }
+          </>
         ))}
       </div>
     </>
