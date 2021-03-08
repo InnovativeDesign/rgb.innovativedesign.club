@@ -122,6 +122,9 @@ h3 {
   font-family: 'Terminal';
   font-weight: 400;
   font-size: 36px;
+  line-height: 0px;
+  /* margin: 20px; */
+  padding: 0px;
 }
 
 .REACH {

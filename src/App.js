@@ -28,7 +28,7 @@ const scheduleContent = [
   {
     name: "Office Hours",
     time: "3:30 pm",
-    desc: "Open QA, come meet the team!",
+    desc: "Come meet the designers and ask any questions you have!",
   },
 ]
 
