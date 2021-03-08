@@ -1,5 +1,5 @@
 import './App.css';
-import Banner from './img/BANNER.svg'
+import Banner from './img/BANNER.png'
 
 const scheduleContent = [
   {
@@ -66,9 +66,9 @@ function Heading() {
   return (
     <>
       <div className="heading">
-        <h2 className="rotateRight">REACH GROW BUILD</h2>
+        {/* <h2 className="rotateRight">REACH GROW BUILD</h2> */}
         <img src={Banner} alt="BANNER" className="banner" />
-        <h2 className="rotateLeft">INNOVATIVE DESIGN</h2>
+        {/* <h2 className="rotateLeft">INNOVATIVE DESIGN</h2> */}
       </div>
     </>
   )
@@ -98,7 +98,7 @@ function App() {
         <Heading />
         <Content />
         <div className="section2">
-          <p>Join Innovative Design on Saturday, March 9th for a day of learning from industry designers through a series of talks, workshops, and open Q&A. Following the theme of 'creative conversations', speeches and workshops will explore the unique backgrounds of these professionals and how they made their way through the design industry!</p>
+          <p>RGB will be hosted on March 13th, and will provide students with the opportunity to listen to industry professionals discuss their careers. RGB 2021 will be a virtual event, and we'll be joined by speakers whose careers have taken them to Spotify, the New York Times, and beyond!</p>
           <h3 style={{textAlign: "center", color: "#FFB91C"}}>SCHEDULE</h3>
           <Schedule content={scheduleContent} />
         </div>
