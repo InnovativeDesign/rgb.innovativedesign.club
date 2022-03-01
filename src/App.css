@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   color: #1728A8;
-
+  overflow-x: hidden;
 }
 
 .heading {
@@ -12,10 +12,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
+  background: #111;
 }
 
 .banner {
-  width: 400px;
+  height: 100vh;
 }
 
 .rotateRight {
@@ -36,12 +38,33 @@
 }
 
 .content {
-  width: 400px;
+  width: 100vw;
+  height: 100vh;
+  /* margin:auto; */
+  top:-5%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* background-color: #111; */
+  /* z-index: -5; */
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
 }
 
 .contentText {
@@ -51,10 +74,10 @@
 }
 
 .registerButton {
-  font-family: 'Terminal';
+  font-family: 'Pixelade';
   background-color: #F45093;
   color: white;
-  width: 100%;
+  width: 18%;
   
   font-size: 36px;
   font-weight: 400;
@@ -65,7 +88,9 @@
 }
 
 .section2 {
-  width: 800px;
+  padding: 30px;
+  width: 100vw;
+  background-color: #9affff;
 }
 
 .schedule {
@@ -78,53 +103,62 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 20px 40px;
 }
 
 .speakerHover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 20px 40px;
 }
 .speakerHover:hover {
   background-color: rgb(23,40,168, .1);
 }
 
 .speakerTime {
-  color: #FFB91C;
-  font-family: 'Terminal';
+  color: #ff62ff;
+  font-family: 'Pixelade';
   font-weight: 400;
   font-size: 36px;
 }
 .speakerName {
-  color: black;
-  font-family: 'DMSans';
+  color: #1c4bbd;
+  font-family: pinot-grigio-modern, sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-style: normal;
 }
 .speakerDesc {
   max-width: 60%;
 
-  color: black;
+  color: #1c4bbd;
   font-family: 'DMSans';
   font-weight: 400;
 }
 
 
 h2 {
-  color: #1728A8;
-  font-family: 'Terminal';
+  color: white;
+  font-family: 'Pixelade';
   font-weight: 400;
 }
 
 h3 {
-  font-family: 'Terminal';
+  font-family: 'Pixelade';
   font-weight: 400;
   font-size: 36px;
   line-height: 0px;
   /* margin: 20px; */
   padding: 0px;
+  color: white;
+}
+
+p {
+  color: #1c4bbd;
+  font-family: pinot-grigio-modern, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0 100px;
 }
 
 .REACH {
@@ -139,4 +173,21 @@ h3 {
 a {
   color: white;
   text-decoration: none;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  text-align: center;
+  font-family: 'Pixelade';
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.footer a {
+  color: #61d4ff;
+}
+
+.footer a:hover {
+  color: #ffffb7;
 }

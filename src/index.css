@@ -14,8 +14,8 @@ code {
 }
 
 @font-face {
-  font-family: 'Terminal';
-  src: local('Terminal'), url(./fonts/terminal-grotesque.ttf) format('truetype');
+  font-family: 'Pixelade';
+  src: local('Pixelade'), url(./fonts/PIXELADE.TTF) format('truetype');
 }
 
 @font-face {
