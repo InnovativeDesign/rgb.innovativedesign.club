@@ -8,16 +8,18 @@ const scheduleContent = [
     desc: "Welcome, Player! RGB 2022 is about to begin!",
   },
   {
-    name: "TBD",
+    name: "✨ Elizabeth Zhou",
+    title: "Product Designer @ Applied Intuition",
     time: "1:20 pm",
-    // desc: "Formerly Brand Design Director at Spotify. Now, independent designer based in Vienna with focus on branding and art direction",
+    prez: "A Leap of Faith into Design",
     // link: "https://erikherrstrom.com/"
   },
   {
-    name: "TBD",
+    name: "✨ Elizabeth Tang",
+    title: "Creative Photographer",
     time: "2:10 pm",
-    // desc: "A Guadalajara-based Senior UX designer, currently leading the team that’s getting rid of food waste in our Wizeline offices. I’m also a mentor, an occasional speaker, and a full-time advocate of naps.",
-    // link: "https://dossiette.com/"
+    prez: "Re-Imagining Images",
+    extra: "*Please have Adobe Photoshop downloaded prior"
   },
   {
     name: "Intermission",
@@ -25,15 +27,17 @@ const scheduleContent = [
     desc: "Take a pause ⏸︎. We'll be back shortly!",
   },
   {
-    name: "TBD",
+    name: "✨ Rachel Xiang",
+    title: "Freelance 3D Animator",
     time: "3:20 pm",
-    // desc: "I am a graphic designer from Beirut based in New York. I currently work with AIGA Eye on Design 🤱🏽 and as an art director for The New York Times.",
+    prez: "Watering Your Creative Plants: Learnings From My Journey to 3D Animation",
     // link: "https://www.talasafie.com/"
   },
     {
-    name: "TBD",
+    name: "✨ Sasha Dimov",
+    title: "Product Designer @ Steward",
     time: "4:10 pm",
-    // desc: "I am a graphic designer from Beirut based in New York. I currently work with AIGA Eye on Design 🤱🏽 and as an art director for The New York Times.",
+    prez: "How to Quit Your Job: A Search for Meaningful Work",
     // link: "https://www.talasafie.com/"
   },
   {
@@ -44,6 +48,7 @@ const scheduleContent = [
   {
     name: "Closing + Raffle Winner",
     time: "5:50 pm",
+    desc: "Thanks for playing! 🕹️",
   },
 ]
 
@@ -53,7 +58,7 @@ function Schedule({ content }) {
       <div className="schedule">
         {content.map(speaker => (
           <>
-          {speaker.link ? 
+          {speaker.desc ? 
             <a href={speaker.link} className="speakerHover" target="_blank" rel="noreferrer">
               <div>
                 <div className="speakerTime">{speaker.time}</div>
@@ -62,13 +67,17 @@ function Schedule({ content }) {
               <div className="speakerDesc">{speaker.desc}</div>
             </a>
             : 
-            <div href={speaker.link} className="speaker" target="_blank">
+            <a href={speaker.link} className="speakerHover" target="_blank" rel="noreferrer">
               <div>
                 <div className="speakerTime">{speaker.time}</div>
                 <div className="speakerName">{speaker.name}</div>
               </div>
-              <div className="speakerDesc">{speaker.desc}</div>
-            </div>
+              <div className="speakerPrez">
+                <div>"{speaker.prez}"</div>
+                <br></br>
+                <div><i>{speaker.extra}</i></div>
+              </div>
+            </a>
           }
           </>
         ))}
@@ -101,7 +110,7 @@ function Content() {
           <h3 className="BUILD"> - BUILD</h3>
         </div>
         <h3>3/12/22, 1-6pm @Jacobs 310</h3>
-        <a className="registerButton" href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.eventbrite.com%2Fe%2F273943210517&h=AT08hvSM9i4J7fuvXTRzTbJ0mMGoyGhRA2w6RYDsXVth3osm80YJRqZyYq2n-f0gxJyMYBITM3KZDqz8BIWGu-HbuICD6ld3rVhYkJ59aQ-_szBGG5cqB0LdkIU7oMXFHLmkTpbKyPU" target="_blank" rel="noreferrer">REGISTER NOW</a>
+        <a className="registerButton" href="www.eventbrite.com/e/273943210517" target="_blank" rel="noreferrer">REGISTER NOW</a>
       </div>
     </>
   )

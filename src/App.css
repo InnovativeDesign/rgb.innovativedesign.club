@@ -91,6 +91,7 @@
   padding: 30px;
   width: 100vw;
   background-color: #9affff;
+  text-transform: uppercase;
 }
 
 .schedule {
@@ -110,7 +111,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 300px;
 }
 .speakerHover:hover {
   background-color: rgb(23,40,168, .1);
@@ -130,12 +131,25 @@
 }
 .speakerDesc {
   max-width: 60%;
-
+  float: right;
   color: #1c4bbd;
   font-family: 'DMSans';
   font-weight: 400;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  text-transform: lowercase;
 }
 
+.speakerPrez {
+  color: #492F5B;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  text-transform: lowercase;
+}
 
 h2 {
   color: white;
@@ -155,7 +169,7 @@ h3 {
 
 p {
   color: #1c4bbd;
-  font-family: pinot-grigio-modern, sans-serif;
+  /* font-family: pinot-grigio-modern, sans-serif; */
   font-weight: 500;
   font-style: normal;
   padding: 0 100px;
@@ -190,4 +204,25 @@ a {
 
 .footer a:hover {
   color: #ffffb7;
+}
+
+@media screen and (max-width: 1000px) {
+  .speakerHover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+
+  .schedule {
+    font-size: 14px;
+  }
+
+  .speakerPrez {
+    width: 50%;
+  }
+
+  .speakerDesc {
+    width: 50%;
+  }
 }
