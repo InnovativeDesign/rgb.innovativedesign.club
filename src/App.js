@@ -110,7 +110,7 @@ function Content() {
           <h3 className="BUILD"> - BUILD</h3>
         </div>
         <h3>3/12/22, 1-6pm @Jacobs 310</h3>
-        <a className="registerButton" href="www.eventbrite.com/e/273943210517" target="_blank" rel="noreferrer">REGISTER NOW</a>
+        <a className="registerButton" href="https://www.eventbrite.com/e/273943210517" target="_blank" rel="noreferrer">REGISTER NOW</a>
       </div>
     </>
   )
