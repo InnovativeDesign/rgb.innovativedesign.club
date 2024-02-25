@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: "Termina";
+  src: url("../public/fonts/TerminaTest-Regular.otf");
+}
