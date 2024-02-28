@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main class="bg-[#FBE9CC] p-24" className="flex min-h-screen flex-col items-center justify-between">
       <div class="relative pb-4 flex flex-col items-center">
-        <a href="https://www.innovativedesign.club/" className="inline-block font-termina text-xs px-2 py-2 md:mb-4 md:px-8 md:py-4 md:text-lg lg:text-xl lg:mb-8 md:px-8 md:py-4 bg-red-600 text-white font-semibold rounded-full shadow-md hover:bg-red-700 transition-colors duration-300">
+        <a href="https://www.innovativedesign.club/" className="text-center inline-block font-termina text-xs px-2 py-2 md:mb-4 md:px-8 md:py-4 md:text-lg lg:text-xl lg:mb-8 md:px-8 md:py-4 bg-red-600 text-white font-semibold rounded-full shadow-md hover:bg-red-700 transition-colors duration-300">
           Back to InnoD Website
         </a>
         <div>
