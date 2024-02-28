@@ -5,7 +5,7 @@ export default function Home() {
     <main class="bg-[#FBE9CC] p-24" className="flex min-h-screen flex-col items-center justify-between">
       <div class="relative pb-4 flex flex-col items-center">
         <div>
-          <a href="your-link-url" className="top-[8%] left-[25%]">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8Qv4_SpyhP2XgAU3IgzAr8XamaJrAx07ae90bGKC4rKLZjA/viewform" className="top-[8%] left-[25%]">
             <Image className="relative pb-2 pointer-events-none" layout="responsive" width="500" height="500" priority src="/images/rgb_title_w_button.png" alt="rgb_title" />
           </a>
         </div>
